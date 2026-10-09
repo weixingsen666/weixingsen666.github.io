@@ -12,27 +12,23 @@
     <!-- 字体 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
 
     <!-- 样式 -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- 动态背景粒子 -->
-    <canvas id="particles-canvas"></canvas>
 
-    <!-- 导航栏 -->
+    <!-- 顶部导航栏（深蓝） -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#hero" class="nav-logo">
-                <span class="logo-bracket">&lt;</span>weixingsen666<span class="logo-bracket">/&gt;</span>
-            </a>
+            <a href="#home" class="nav-logo">weixingsen666</a>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#hero" class="nav-link active">首页</a></li>
-                <li><a href="#about" class="nav-link">关于我</a></li>
-                <li><a href="#skills" class="nav-link">技能</a></li>
-                <li><a href="#projects" class="nav-link">项目</a></li>
-                <li><a href="#contact" class="nav-link">联系</a></li>
+                <li><a href="#home" class="nav-link active">首页</a></li>
+                <li><a href="#profile" class="nav-link">个人信息</a></li>
+                <li><a href="#projects" class="nav-link">项目经历</a></li>
+                <li><a href="#life" class="nav-link">日常生活</a></li>
+                <li><a href="#contact" class="nav-link">联系方式</a></li>
             </ul>
             <div class="nav-toggle" id="nav-toggle" aria-label="切换菜单">
                 <span></span><span></span><span></span>
@@ -40,243 +36,192 @@
         </div>
     </nav>
 
-    <!-- 首屏：Hero 区 -->
-    <section id="hero" class="hero">
-        <div class="hero-bg-gradient"></div>
-        <div class="container hero-content">
-            <div class="hero-avatar">
-                <img src="assets/avatar.svg" alt="头像" class="avatar-img">
-                <div class="avatar-ring"></div>
-            </div>
-            <p class="hero-greeting">👋 你好，我是</p>
-            <h1 class="hero-name">weixingsen666</h1>
-            <h2 class="hero-title">
-                <span class="typing-text" id="typing-text"></span><span class="cursor">|</span>
-            </h2>
-            <p class="hero-desc">
-                热爱编程，享受用代码创造价值的过程。<br>
-                持续学习中，欢迎一起交流成长 🚀
-            </p>
-            <div class="hero-actions">
-                <a href="#projects" class="btn btn-primary">查看项目</a>
-                <a href="https://github.com/weixingsen666" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
-            </div>
-            <div class="hero-socials">
-                <a href="https://github.com/weixingsen666" target="_blank" rel="noopener" class="social-link" title="GitHub">
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 .5C5.37.5 0 5.78 0 12.292c0 5.211 3.438 9.63 8.205 11.18.6.111.82-.26.82-.577 0-.285-.01-1.04-.016-2.046-3.338.726-4.043-1.61-4.043-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.838 1.237 1.838 1.237 1.07 1.835 2.807 1.305 3.492.997.108-.776.42-1.305.762-1.606-2.665-.303-5.467-1.332-5.467-5.93 0-1.31.468-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.323 3.3 1.23a11.51 11.51 0 0 1 3-.405c1.018.005 2.045.138 3 .405 2.291-1.553 3.297-1.23 3.297-1.23.654 1.652.243 2.873.12 3.176.77.84 1.234 1.911 1.234 3.221 0 4.609-2.807 5.624-5.48 5.92.43.371.815 1.103.815 2.222 0 1.606-.014 2.9-.014 3.293 0 .32.218.694.825.576C20.565 21.917 24 17.495 24 12.292 24 5.78 18.627.5 12 .5z"/></svg>
-                </a>
-                <a href="mailto:your-email@example.com" class="social-link" title="邮箱">
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M2.25 4.5h19.5A1.75 1.75 0 0 1 23.5 6.25v11.5A1.75 1.75 0 0 1 21.75 19.5H2.25A1.75 1.75 0 0 1 .5 17.75V6.25A1.75 1.75 0 0 1 2.25 4.5zm.25 2.5v1.18l9.5 5.7 9.5-5.7V7l-9.5 5.7-9.5-5.7zm19 3.36-9.5 5.7-9.5-5.7v7.14h19V10.36z"/></svg>
-                </a>
-                <a href="#contact" class="social-link" title="更多联系">
-                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20zm0 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16zm-1-4h2v2h-2v-2zm0-10h2v8h-2V6z"/></svg>
-                </a>
-            </div>
-            <a href="#about" class="scroll-down" aria-label="向下滚动">
-                <span class="mouse"><span class="wheel"></span></span>
-            </a>
-        </div>
-    </section>
+    <!-- 主要内容容器 -->
+    <main class="main">
 
-    <!-- 关于我 -->
-    <section id="about" class="section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-num">01</span>
-                <h2 class="section-title">关于我</h2>
-            </div>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>你好，我是 <strong>weixingsen666</strong>，一名热爱技术的开发者。</p>
-                    <p>对全栈开发、开源社区和新颖的技术都有浓厚兴趣。喜欢用简洁优雅的代码解决实际问题，也相信持续学习是开发者最宝贵的特质。</p>
-                    <p>目前主要关注的方向包括：</p>
-                    <ul class="about-list">
-                        <li>🌐 Web 前端 / 全栈开发</li>
-                        <li>⚙️ 自动化工具与效率提升</li>
-                        <li>📚 开源项目与社区贡献</li>
-                        <li>🤖 AI 工具的实践与应用</li>
-                    </ul>
-                </div>
-                <div class="about-stats">
-                    <div class="stat-card">
-                        <span class="stat-num" data-target="10">0</span>
-                        <span class="stat-label">项目数</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-num" data-target="2026">0</span>
-                        <span class="stat-label">开始年份</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-num" data-target="∞">0</span>
-                        <span class="stat-label">学习热情</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-num" data-target="100">0</span><span class="stat-suffix">%</span>
-                        <span class="stat-label">投入度</span>
+        <!-- ========== 1. 首页（横幅 + 自我介绍 + 头像） ========== -->
+        <section id="home" class="hero">
+            <div class="card hero-card">
+                <div class="hero-text">
+                    <p class="hero-tag">👋 欢迎来到我的主页</p>
+                    <h1 class="hero-name">你好，我是 <span class="name-highlight">weixingsen666</span></h1>
+                    <p class="hero-slogan">一名热爱学习与技术的学生，正在探索编程与知识的边界。</p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">看看我的项目</a>
+                        <a href="https://github.com/weixingsen666" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
                     </div>
                 </div>
+                <div class="hero-avatar">
+                    <img src="assets/avatar.svg" alt="头像" class="avatar-img">
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- 技能 -->
-    <section id="skills" class="section section-alt">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-num">02</span>
-                <h2 class="section-title">技术栈</h2>
-            </div>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <div class="skill-icon">💻</div>
-                    <h3>前端</h3>
-                    <ul>
-                        <li>HTML5 / CSS3</li>
-                        <li>JavaScript (ES6+)</li>
-                        <li>响应式设计</li>
+        <!-- ========== 2. 个人信息 ========== -->
+        <section id="profile" class="section">
+            <h2 class="section-title">个人信息</h2>
+            <div class="card">
+                <div class="profile-grid">
+                    <div class="profile-item">
+                        <span class="profile-label">姓名</span>
+                        <span class="profile-value">weixingsen666</span>
+                    </div>
+                    <div class="profile-item">
+                        <span class="profile-label">专业</span>
+                        <span class="profile-value">计算机相关专业</span>
+                    </div>
+                    <div class="profile-item">
+                        <span class="profile-label">研究方向</span>
+                        <span class="profile-value">Web 开发 / 软件工程</span>
+                    </div>
+                </div>
+
+                <div class="profile-block">
+                    <h3 class="block-title">个人简介</h3>
+                    <p class="block-text">
+                        我是一名对技术充满热情的学生，喜欢通过动手实践来学习和成长。
+                        目前专注于 Web 开发方向，同时也对 AI 工具、开源社区感兴趣。
+                        相信持续学习是最好的投资，也乐于分享和交流。
+                    </p>
+                </div>
+
+                <div class="profile-block">
+                    <h3 class="block-title">技能清单</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML / CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">Git / GitHub</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">VS Code</span>
+                    </div>
+                </div>
+
+                <div class="profile-block">
+                    <h3 class="block-title">教育经历</h3>
+                    <ul class="timeline">
+                        <li class="timeline-item">
+                            <span class="timeline-time">2024 - 至今</span>
+                            <div class="timeline-content">
+                                <strong>大学本科</strong> · 计算机相关专业
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <span class="timeline-time">2021 - 2024</span>
+                            <div class="timeline-content">
+                                <strong>高中</strong>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🔧</div>
-                    <h3>后端</h3>
-                    <ul>
-                        <li>Node.js</li>
-                        <li>Python</li>
-                        <li>RESTful API</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">🛠</div>
-                    <h3>工具</h3>
-                    <ul>
-                        <li>Git / GitHub</li>
-                        <li>VS Code</li>
-                        <li>命令行 / Shell</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon">☁️</div>
-                    <h3>部署</h3>
-                    <ul>
-                        <li>GitHub Pages</li>
-                        <li>Vercel / Netlify</li>
-                        <li>Docker 入门</li>
-                    </ul>
-                </div>
             </div>
+        </section>
 
-            <!-- 进度条 -->
-            <div class="skills-progress">
-                <div class="progress-item">
-                    <div class="progress-label"><span>HTML / CSS</span><span>90%</span></div>
-                    <div class="progress-bar"><div class="progress-fill" data-progress="90"></div></div>
-                </div>
-                <div class="progress-item">
-                    <div class="progress-label"><span>JavaScript</span><span>75%</span></div>
-                    <div class="progress-bar"><div class="progress-fill" data-progress="75"></div></div>
-                </div>
-                <div class="progress-item">
-                    <div class="progress-label"><span>Git</span><span>80%</span></div>
-                    <div class="progress-bar"><div class="progress-fill" data-progress="80"></div></div>
-                </div>
-                <div class="progress-item">
-                    <div class="progress-label"><span>Python</span><span>60%</span></div>
-                    <div class="progress-bar"><div class="progress-fill" data-progress="60"></div></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 项目 -->
-    <section id="projects" class="section">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-num">03</span>
-                <h2 class="section-title">项目展示</h2>
-            </div>
-            <p class="section-subtitle">这里展示我做过的一些项目，欢迎 star ⭐</p>
-
+        <!-- ========== 3. 项目经历 ========== -->
+        <section id="projects" class="section">
+            <h2 class="section-title">项目经历</h2>
             <div class="projects-grid">
-                <article class="project-card">
-                    <div class="project-top">
-                        <div class="project-folder">📁</div>
-                        <div class="project-links">
-                            <a href="https://github.com/weixingsen666" target="_blank" rel="noopener" title="源码">
-                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5C5.37.5 0 5.78 0 12.292c0 5.211 3.438 9.63 8.205 11.18.6.111.82-.26.82-.577 0-.285-.01-1.04-.016-2.046-3.338.726-4.043-1.61-4.043-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.838 1.237 1.838 1.237 1.07 1.835 2.807 1.305 3.492.997.108-.776.42-1.305.762-1.606-2.665-.303-5.467-1.332-5.467-5.93 0-1.31.468-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.323 3.3 1.23a11.51 11.51 0 0 1 3-.405c1.018.005 2.045.138 3 .405 2.291-1.553 3.297-1.23 3.297-1.23.654 1.652.243 2.873.12 3.176.77.84 1.234 1.911 1.234 3.221 0 4.609-2.807 5.624-5.48 5.92.43.371.815 1.103.815 2.222 0 1.606-.014 2.9-.014 3.293 0 .32.218.694.825.576C20.565 21.917 24 17.495 24 12.292 24 5.78 18.627.5 12 .5z"/></svg>
-                            </a>
+
+                <article class="card project-card">
+                    <div class="project-thumb thumb-blue">🌐</div>
+                    <div class="project-body">
+                        <h3 class="project-title">个人主页</h3>
+                        <p class="project-desc">基于 GitHub Pages 搭建的个人静态主页，展示个人信息与项目作品。</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">GitHub Pages</span>
                         </div>
-                    </div>
-                    <h3 class="project-title">个人主页</h3>
-                    <p class="project-desc">你正在看的这个网站！基于纯 HTML/CSS/JS 实现，部署在 GitHub Pages 上，轻量、响应式、带动画。</p>
-                    <div class="project-tags">
-                        <span class="tag">HTML</span>
-                        <span class="tag">CSS</span>
-                        <span class="tag">JavaScript</span>
-                        <span class="tag">GitHub Pages</span>
+                        <p class="project-result"><strong>收获：</strong>掌握了 Git 工作流、静态网站部署与响应式设计。</p>
                     </div>
                 </article>
 
-                <article class="project-card">
-                    <div class="project-top">
-                        <div class="project-folder">📁</div>
-                        <div class="project-links">
-                            <a href="https://github.com/weixingsen666" target="_blank" rel="noopener" title="源码">
-                                <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5C5.37.5 0 5.78 0 12.292c0 5.211 3.438 9.63 8.205 11.18.6.111.82-.26.82-.577 0-.285-.01-1.04-.016-2.046-3.338.726-4.043-1.61-4.043-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.838 1.237 1.838 1.237 1.07 1.835 2.807 1.305 3.492.997.108-.776.42-1.305.762-1.606-2.665-.303-5.467-1.332-5.467-5.93 0-1.31.468-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.323 3.3 1.23a11.51 11.51 0 0 1 3-.405c1.018.005 2.045.138 3 .405 2.291-1.553 3.297-1.23 3.297-1.23.654 1.652.243 2.873.12 3.176.77.84 1.234 1.911 1.234 3.221 0 4.609-2.807 5.624-5.48 5.92.43.371.815 1.103.815 2.222 0 1.606-.014 2.9-.014 3.293 0 .32.218.694.825.576C20.565 21.917 24 17.495 24 12.292 24 5.78 18.627.5 12 .5z"/></svg>
-                            </a>
+                <article class="card project-card">
+                    <div class="project-thumb thumb-green">📚</div>
+                    <div class="project-body">
+                        <h3 class="project-title">学习笔记仓库</h3>
+                        <p class="project-desc">整理日常学习过程中的笔记与代码片段，形成可检索的个人知识库。</p>
+                        <div class="project-tags">
+                            <span class="tag">Markdown</span>
+                            <span class="tag">Git</span>
                         </div>
-                    </div>
-                    <h3 class="project-title">更多项目持续更新中</h3>
-                    <p class="project-desc">刚起步，后续会陆续上传学习过程中做的练手项目、小工具和开源贡献，敬请期待 ✨</p>
-                    <div class="project-tags">
-                        <span class="tag">Coming Soon</span>
+                        <p class="project-result"><strong>收获：</strong>养成了定期总结的习惯，提高学习效率。</p>
                     </div>
                 </article>
-            </div>
 
-            <div class="projects-cta">
-                <a href="https://github.com/weixingsen666?tab=repositories" target="_blank" rel="noopener" class="btn btn-primary">查看全部仓库 →</a>
-            </div>
-        </div>
-    </section>
+                <article class="card project-card">
+                    <div class="project-thumb thumb-orange">🛠️</div>
+                    <div class="project-body">
+                        <h3 class="project-title">更多项目筹备中</h3>
+                        <p class="project-desc">正在规划更多实战项目，敬请期待后续更新 ✨</p>
+                        <div class="project-tags">
+                            <span class="tag">Coming Soon</span>
+                        </div>
+                        <p class="project-result"><strong>期待：</strong>持续积累，逐步构建个人作品集。</p>
+                    </div>
+                </article>
 
-    <!-- 联系 -->
-    <section id="contact" class="section section-alt">
-        <div class="container">
-            <div class="section-header">
-                <span class="section-num">04</span>
-                <h2 class="section-title">联系我</h2>
             </div>
-            <p class="section-subtitle">有任何想法、合作或交流意向，欢迎随时联系我 👋</p>
+        </section>
 
+        <!-- ========== 4. 日常生活 ========== -->
+        <section id="life" class="section">
+            <h2 class="section-title">日常生活</h2>
+            <p class="section-sub">学习之外的我，也喜欢这些轻松的小事～</p>
+            <div class="life-grid">
+                <div class="card life-card">
+                    <div class="life-icon">🏀</div>
+                    <h3 class="life-title">运动</h3>
+                    <p class="life-text">喜欢打篮球和慢跑，保持身体活力，头脑也更清晰。</p>
+                </div>
+                <div class="card life-card">
+                    <div class="life-icon">📖</div>
+                    <h3 class="life-title">阅读</h3>
+                    <p class="life-text">偏爱科幻小说与技术书籍，最近在读《三体》。</p>
+                </div>
+                <div class="card life-card">
+                    <div class="life-icon">🎵</div>
+                    <h3 class="life-title">音乐</h3>
+                    <p class="life-text">写代码时离不开音乐，流行和纯音乐都爱听。</p>
+                </div>
+                <div class="card life-card">
+                    <div class="life-icon">🍜</div>
+                    <h3 class="life-title">美食</h3>
+                    <p class="life-text">探索校园周边的美食小店是周末最期待的事。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== 5. 联系方式 ========== -->
+        <section id="contact" class="section">
+            <h2 class="section-title">联系方式</h2>
+            <p class="section-sub">欢迎随时和我交流～</p>
             <div class="contact-grid">
-                <a href="https://github.com/weixingsen666" target="_blank" rel="noopener" class="contact-card">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12 .5C5.37.5 0 5.78 0 12.292c0 5.211 3.438 9.63 8.205 11.18.6.111.82-.26.82-.577 0-.285-.01-1.04-.016-2.046-3.338.726-4.043-1.61-4.043-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.838 1.237 1.838 1.237 1.07 1.835 2.807 1.305 3.492.997.108-.776.42-1.305.762-1.606-2.665-.303-5.467-1.332-5.467-5.93 0-1.31.468-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.323 3.3 1.23a11.51 11.51 0 0 1 3-.405c1.018.005 2.045.138 3 .405 2.291-1.553 3.297-1.23 3.297-1.23.654 1.652.243 2.873.12 3.176.77.84 1.234 1.911 1.234 3.221 0 4.609-2.807 5.624-5.48 5.92.43.371.815 1.103.815 2.222 0 1.606-.014 2.9-.014 3.293 0 .32.218.694.825.576C20.565 21.917 24 17.495 24 12.292 24 5.78 18.627.5 12 .5z"/></svg>
+                <a href="mailto:your-email@example.com" class="card contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-info">
+                        <h3>邮箱</h3>
+                        <p>your-email@example.com</p>
                     </div>
-                    <h3>GitHub</h3>
-                    <p>@weixingsen666</p>
                 </a>
-                <a href="mailto:your-email@example.com" class="contact-card">
-                    <div class="contact-icon">
-                        <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M2.25 4.5h19.5A1.75 1.75 0 0 1 23.5 6.25v11.5A1.75 1.75 0 0 1 21.75 19.5H2.25A1.75 1.75 0 0 1 .5 17.75V6.25A1.75 1.75 0 0 1 2.25 4.5zm.25 2.5v1.18l9.5 5.7 9.5-5.7V7l-9.5 5.7-9.5-5.7zm19 3.36-9.5 5.7-9.5-5.7v7.14h19V10.36z"/></svg>
+                <a href="https://github.com/weixingsen666" target="_blank" rel="noopener" class="card contact-card">
+                    <div class="contact-icon">🐙</div>
+                    <div class="contact-info">
+                        <h3>GitHub</h3>
+                        <p>github.com/weixingsen666</p>
                     </div>
-                    <h3>邮箱</h3>
-                    <p>your-email@example.com</p>
-                </a>
-                <a href="#hero" class="contact-card">
-                    <div class="contact-icon">🔗</div>
-                    <h3>个人主页</h3>
-                    <p>weixingsen666.github.io</p>
                 </a>
             </div>
-        </div>
-    </section>
+        </section>
+
+    </main>
 
     <!-- 页脚 -->
     <footer class="footer">
         <div class="container footer-content">
-            <p>© <span id="year"></span> weixingsen666 · Built with ❤️ &amp; GitHub Pages</p>
-            <a href="#hero" class="back-top" title="回到顶部">↑ Top</a>
+            <p>© <span id="year"></span> weixingsen666 · Powered by GitHub Pages</p>
+            <a href="#home" class="back-top">回到顶部 ↑</a>
         </div>
     </footer>
 
