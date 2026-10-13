@@ -344,6 +344,21 @@ img { max-width: 100%; display: block; }
 }
 .project-result strong { color: var(--text-dark); }
 
+/* 项目照片展示条：高度与头像一致（160px），等比宽度，小间距 */
+.project-gallery {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    overflow-x: auto;           /* 照片过多时横向滚动 */
+}
+.project-gallery img {
+    height: 160px;
+    width: auto;
+    display: block;
+    border: 1px solid var(--border);
+    flex-shrink: 0;
+}
+
 /* ---------- 竞赛经历 ---------- */
 .award-card { padding: 8px 28px; }
 
