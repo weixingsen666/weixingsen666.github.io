@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="weixingsen666 的个人主页 - GitHub Pages">
-    <title>weixingsen666 | 个人主页</title>
+    <meta name="description" content="魏兴森的个人主页 - 江苏科技大学软件工程 · 保研上海大学计算机科学与技术">
+    <title>魏兴森 | 个人主页</title>
 
     <!-- 网站图标 -->
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
-    <!-- 字体 -->
+    <!-- 字体：正文黑体 + 标题衬线（学术感） -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@600;700;900&display=swap" rel="stylesheet">
 
     <!-- 样式 -->
     <link rel="stylesheet" href="css/style.css">
@@ -22,13 +22,12 @@
     <!-- 顶部导航栏（深蓝） -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
-            <a href="#home" class="nav-logo">weixingsen666</a>
+            <a href="#top" class="nav-logo">魏兴森</a>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link active">首页</a></li>
-                <li><a href="#profile" class="nav-link">个人信息</a></li>
+                <li><a href="#profile" class="nav-link active">个人信息</a></li>
                 <li><a href="#projects" class="nav-link">项目经历</a></li>
+                <li><a href="#awards" class="nav-link">竞赛经历</a></li>
                 <li><a href="#life" class="nav-link">日常生活</a></li>
-                <li><a href="#contact" class="nav-link">联系方式</a></li>
             </ul>
             <div class="nav-toggle" id="nav-toggle" aria-label="切换菜单">
                 <span></span><span></span><span></span>
@@ -37,17 +36,20 @@
     </nav>
 
     <!-- 主要内容容器 -->
-    <main class="main">
+    <main class="main" id="top">
 
-        <!-- ========== 1. 首页（横幅 + 自我介绍 + 头像） ========== -->
-        <section id="home" class="hero">
+        <!-- ========== 顶部横幅 ========== -->
+        <section class="hero">
             <div class="card hero-card">
                 <div class="hero-text">
-                    <p class="hero-tag">welcome to my homepage</p>
-                    <h1 class="hero-name">I am</I> <span class="name-highlight">JUST-WXS</span></h1>
-                    <p class="hero-slogan">大四在读，计算机码农小菜一枚。</p>
+                    <p class="hero-tag">你好，我是</p>
+                    <h1 class="hero-name">魏兴森</h1>
+                    <p class="hero-slogan">
+                        江苏科技大学软件工程专业本科生，已保研至上海大学攻读计算机科学与技术学术型硕士。
+                        <br>座右铭：山止川行，风禾尽起。
+                    </p>
                     <div class="hero-actions">
-                        <a href="#projects" class="btn btn-primary">看看我的项目</a>
+                        <a href="#projects" class="btn btn-primary">查看项目经历</a>
                         <a href="https://github.com/weixingsen666" target="_blank" rel="noopener" class="btn btn-ghost">GitHub</a>
                     </div>
                 </div>
@@ -57,41 +59,18 @@
             </div>
         </section>
 
-        <!-- ========== 2. 个人信息 ========== -->
+        <!-- ========== 1. 个人信息 ========== -->
         <section id="profile" class="section">
             <h2 class="section-title">个人信息</h2>
             <div class="card">
                 <div class="profile-grid">
                     <div class="profile-item">
                         <span class="profile-label">姓名</span>
-                        <span class="profile-value">JUST-WXS</span>
+                        <span class="profile-value">魏兴森</span>
                     </div>
                     <div class="profile-item">
-                        <span class="profile-label">专业</span>
-                        <span class="profile-value">software engering</span>
-                    </div>
-                    <div class="profile-item">
-                        <span class="profile-label">研究方向</span>
-                        <span class="profile-value">待发掘</span>
-                    </div>
-                </div>
-
-                <div class="profile-block">
-                    <h3 class="block-title">个人简介</h3>
-                    <p class="block-text">
-                        目前我是一个比较高冷的人。后面看情况更新主页信息。
-                    </p>
-                </div>
-
-                <div class="profile-block">
-                    <h3 class="block-title">技能清单</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">前端</span>
-                        <span class="skill-tag">后端</span>
-                        <!-- <span class="skill-tag">Git / GitHub</span>
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">Node.js</span>
-                        <span class="skill-tag">VS Code</span> -->
+                        <span class="profile-label">邮箱</span>
+                        <span class="profile-value"><a class="text-link" href="mailto:wxsjkd@163.com">wxsjkd@163.com</a></span>
                     </div>
                 </div>
 
@@ -99,117 +78,130 @@
                     <h3 class="block-title">教育经历</h3>
                     <ul class="timeline">
                         <li class="timeline-item">
-                            <span class="timeline-time">2020.09-2027.06 JUST</span>
+                            <span class="timeline-time">2027.09 - 2030.06（拟入学）</span>
                             <div class="timeline-content">
-                                <strong>本科</strong>软件工程
+                                <strong>上海大学</strong> · 计算机科学与技术 · 学术型硕士（推免保研）
                             </div>
                         </li>
                         <li class="timeline-item">
-                            <span class="timeline-time">2027.09-2030.01</span>
+                            <span class="timeline-time">2023.09 - 2027.06</span>
                             <div class="timeline-content">
-                                <strong>研究生</strong>计算机科学与技术学硕
+                                <strong>江苏科技大学</strong> · 计算机学院 · 软件工程 · 本科
                             </div>
                         </li>
                     </ul>
                 </div>
-            </div>
+
+                <div class="profile-block">
+                    <h3 class="block-title">专业技能</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">MATLAB</span>
+                        <span class="skill-tag">Web 开发</span>
+                        <span class="skill-tag">Three.js</span>
+                        <span class="skill-tag">机器学习</span>
+                        <span class="skill-tag">Origin</span>
+                        <span class="skill-tag">LaTeX</span>
+                    </div>
+                </div>
         </section>
 
-        <!-- ========== 3. 项目经历 ========== -->
+        <!-- ========== 2. 项目经历 ========== -->
         <section id="projects" class="section">
             <h2 class="section-title">项目经历</h2>
-            <div class="projects-grid">
 
-                <article class="card project-card">
-                    <div class="project-thumb thumb-blue">🌐</div>
-                    <div class="project-body">
-                        <h3 class="project-title">个人主页</h3>
-                        <p class="project-desc">这边会写个大创</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">JavaScript</span>
-                            <span class="tag">GitHub Pages</span>
-                        </div>
-                        <p class="project-result"><strong>收获：</strong>强化学习。</p>
-                    </div>
-                </article>
+            <article class="card project-card">
+                <div class="project-head">
+                    <h3 class="project-title">基于深度强化学习的无人机覆盖路径研究</h3>
+                    <span class="project-meta">校级大创 · 第一主持人 ｜ 2026.04 - 2027.03</span>
+                </div>
+                <p class="project-desc">
+                    针对传统覆盖算法在复杂环境下缺乏自适应能力的问题，采用 Gymnasium 接口结合 Pygame
+                    渲染搭建仿真环境，构建 18 维连续观测空间，设计覆盖增益、时间效率与碰撞惩罚的多目标奖励函数，
+                    基于近端策略优化（PPO）算法训练模型，实现自适应路径规划与区域覆盖。
+                </p>
+                <div class="project-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Gymnasium</span>
+                    <span class="tag">Pygame</span>
+                    <span class="tag">PPO</span>
+                    <span class="tag">强化学习</span>
+                </div>
+                <p class="project-result">
+                    <strong>主要职责与成果：</strong>负责项目申报与立项答辩；基于 Pygame 搭建可视化仿真环境；
+                    构建 PPO 训练框架并完成超参数调优；对比之字形、螺旋型等传统算法，在覆盖效率与稳定性上表现出显著优势。
+                </p>
+            </article>
 
-                <article class="card project-card">
-                    <div class="project-thumb thumb-green">📚</div>
-                    <div class="project-body">
-                        <h3 class="project-title">项目2</h3>
-                        <p class="project-desc">待写。</p>
-                        <div class="project-tags">
-                            <span class="tag">Markdown</span>
-                            <span class="tag">Git</span>
-                        </div>
-                        <p class="project-result"><strong>收获：</strong>待写。</p>
-                    </div>
-                </article>
+            <article class="card project-card">
+                <div class="project-head">
+                    <h3 class="project-title">零智安探：AI 协同的全链安全态势感知系统</h3>
+                    <span class="project-meta">校级大创 · 成员 ｜ 2025.04 - 2026.03</span>
+                </div>
+                <p class="project-desc">
+                    针对网络安全漏洞检测误报率高的痛点，团队自研零智框架并通过差分验证实现高精度 Web 漏洞检测；
+                    集成 XGBoost 钓鱼识别、CNN 恶意 URL 检测等多模型；构建网络态势与攻防拓扑双维度推演引擎，
+                    并搭建漏洞知识图谱驱动的四维态势可视化平台。
+                </p>
+                <div class="project-tags">
+                    <span class="tag">机器学习</span>
+                    <span class="tag">前端开发</span>
+                    <span class="tag">知识图谱</span>
+                </div>
+                <p class="project-result">
+                    <strong>主要职责与成果：</strong>参与机器学习模型训练；重点负责前端开发，基于 Three.js
+                    等技术搭建 3D 动态态势感知大屏及多类型图表展示平台。项目转化获中国大学生计算机设计大赛
+                    Web 开发赛道江苏省一等奖、国家级二等奖。
+                </p>
+            </article>
+        </section>
 
-                <article class="card project-card">
-                    <div class="project-thumb thumb-orange">🛠️</div>
-                    <div class="project-body">
-                        <h3 class="project-title">更多项目筹备中</h3>
-                        <p class="project-desc">敬请期待后续更新</p>
-                        <div class="project-tags">
-                            <span class="tag">Coming Soon</span>
-                        </div>
-                        <p class="project-result"><strong>期待：</strong>分享。</p>
-                    </div>
-                </article>
-
+        <!-- ========== 3. 竞赛经历 ========== -->
+        <section id="awards" class="section">
+            <h2 class="section-title">竞赛经历</h2>
+            <div class="card award-card">
+                <ul class="award-list">
+                    <li class="award-item">
+                        <span class="award-time">2026.08</span>
+                        <span class="award-name">中国大学生计算机设计大赛</span>
+                        <span class="award-level level-national">国家级二等奖</span>
+                    </li>
+                    <li class="award-item">
+                        <span class="award-time">2026.07</span>
+                        <span class="award-name">全国大学生电工数学建模竞赛</span>
+                        <span class="award-level level-national">国家级二等奖</span>
+                    </li>
+                    <li class="award-item">
+                        <span class="award-time">2025.11</span>
+                        <span class="award-name">高教社杯全国大学生数学建模竞赛</span>
+                        <span class="award-level level-province1">江苏省一等奖</span>
+                    </li>
+                    <li class="award-item">
+                        <span class="award-time">2026.06</span>
+                        <span class="award-name">五一数学建模竞赛</span>
+                        <span class="award-level level-province">江苏省三等奖</span>
+                    </li>
+                    <li class="award-item">
+                        <span class="award-time">2025.06</span>
+                        <span class="award-name">LSCAT 江苏省笔译大赛</span>
+                        <span class="award-level level-province">江苏省三等奖</span>
+                    </li>
+                </ul>
             </div>
         </section>
 
         <!-- ========== 4. 日常生活 ========== -->
         <section id="life" class="section">
             <h2 class="section-title">日常生活</h2>
-            <p class="section-sub">学习之外的我，也喜欢这些轻松的小事～</p>
-            <div class="life-grid">
-                <div class="card life-card">
-                    <div class="life-icon">🏀</div>
-                    <h3 class="life-title">运动</h3>
-                    <p class="life-text">乒乓球。</p>
+            <div class="card life-card">
+                <p class="life-text">
+                    励志减肥！
+                </p>
+                <div class="life-tags">
+                    <span>音乐</span>
+                    <span>游戏</span>
                 </div>
-                <div class="card life-card">
-                    <div class="life-icon">📖</div>
-                    <h3 class="life-title">旅行</h3>
-                    <p class="life-text">待写。</p>
-                </div>
-                <!-- <div class="card life-card">
-                    <div class="life-icon">🎵</div>
-                    <h3 class="life-title">音乐</h3>
-                    <p class="life-text">写代码时离不开音乐，流行和纯音乐都爱听。</p>
-                </div>
-                <div class="card life-card">
-                    <div class="life-icon">🍜</div>
-                    <h3 class="life-title">美食</h3>
-                    <p class="life-text">探索校园周边的美食小店是周末最期待的事。</p>
-                </div> -->
-            </div>
-        </section>
-
-        <!-- ========== 5. 联系方式 ========== -->
-        <section id="contact" class="section">
-            <h2 class="section-title">联系方式</h2>
-            <p class="section-sub">欢迎随时和我交流～</p>
-            <div class="contact-grid">
-                <a href="mailto:your-email@example.com" class="card contact-card">
-                    <div class="contact-icon">✉️</div>
-                    <div class="contact-info">
-                        <h3>邮箱</h3>
-                        <p>邮箱@example.com</p>
-                    </div>
-                </a>
-                <a href="https://github.com/weixingsen666" target="_blank" rel="noopener" class="card contact-card">
-                    <div class="contact-icon">🐙</div>
-                    <div class="contact-info">
-                        <h3>GitHub</h3>
-                        <p>github.com/weixingsen666</p>
-                    </div>
-                </a>
             </div>
         </section>
 
@@ -218,8 +210,8 @@
     <!-- 页脚 -->
     <footer class="footer">
         <div class="container footer-content">
-            <p>© <span id="year"></span> weixingsen666 · Powered by GitHub Pages</p>
-            <a href="#home" class="back-top">回到顶部 ↑</a>
+            <p>© <span id="year"></span> 魏兴森 · Powered by GitHub Pages</p>
+            <a href="#top" class="back-top">回到顶部 ↑</a>
         </div>
     </footer>
 
