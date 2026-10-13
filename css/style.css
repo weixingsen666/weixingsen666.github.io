@@ -313,18 +313,13 @@ img { max-width: 100%; display: block; }
     font-size: 0.92rem;
 }
 
-/* 校徽小图标 */
+/* 校徽小图标（行内显示，位于校名左侧） */
 .school-logo {
-    height: 20px;
+    display: inline-block;
+    height: 22px;
     width: auto;
-    vertical-align: -4px;
+    vertical-align: -6px;
     margin-right: 7px;
-}
-/* 江科大横版 logo：裁剪只显示左侧帆船徽章 */
-.school-logo-crop {
-    width: 20px;
-    object-fit: cover;
-    object-position: left center;
 }
 
 /* ---------- 项目经历 ---------- */
