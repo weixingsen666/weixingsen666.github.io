@@ -219,43 +219,7 @@ img { max-width: 100%; display: block; }
     background: var(--page-bg);
 }
 
-/* ---------- 个人信息 ---------- */
-.profile-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 16px 24px;
-    margin-bottom: 20px;
-}
-
-.profile-item {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-}
-.profile-label {
-    font-size: 0.76rem;
-    color: var(--text-muted);
-    letter-spacing: 1px;
-}
-.profile-value {
-    font-size: 0.95rem;
-    color: var(--text-dark);
-    font-weight: 500;
-}
-
-.profile-block {
-    border-top: 1px solid var(--border);
-    padding-top: 18px;
-    margin-top: 18px;
-}
-.block-title {
-    font-size: 0.98rem;
-    font-weight: 700;
-    color: var(--text-dark);
-    margin-bottom: 10px;
-}
-
-/* 技能标签 */
+/* ---------- 技能标签 ---------- */
 .skill-tags {
     display: flex;
     flex-wrap: wrap;
