@@ -344,17 +344,15 @@ img { max-width: 100%; display: block; }
 }
 .project-result strong { color: var(--text-dark); }
 
-/* 项目照片展示：一行恰好两张，等宽等高，横屏比例 */
+/* 项目照片展示：一行两张，等宽、完整显示不裁剪 */
 .project-gallery {
     display: flex;
     gap: 10px;
-    margin-top: 12px;
+    align-items: flex-start;    /* 顶部对齐，比例不同的照片不强制等高 */
 }
 .project-gallery img {
     width: calc(50% - 5px);     /* 两张平分一行（扣除间距） */
-    aspect-ratio: 16 / 9;       /* 统一横屏比例 */
-    height: auto;
-    object-fit: cover;          /* 超出部分居中裁剪，不变形 */
+    height: auto;               /* 按原始比例缩放，内容完整呈现 */
     display: block;
     border: 1px solid var(--border);
 }
