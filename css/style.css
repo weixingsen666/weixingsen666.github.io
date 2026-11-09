@@ -49,11 +49,11 @@ img { max-width: 100%; display: block; }
     align-items: center;   /* 教育背景与左侧头像区垂直居中，避免上重下轻 */
 }
 
-/* ---------- 顶部个人信息（头像、姓名、邮箱共用同一垂直中轴） ---------- */
+/* ---------- 顶部个人信息（头像、姓名、邮箱左边缘对齐） ---------- */
 .profile-header {
-    width: 164px;          /* 与缩略图列同宽，头像中心对齐缩略图中心 */
+    width: 164px;
     padding-bottom: 4px;
-    text-align: center;
+    text-align: left;
 }
 
 .avatar {
