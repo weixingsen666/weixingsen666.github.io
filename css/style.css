@@ -43,14 +43,15 @@ img { max-width: 100%; display: block; }
 /* ---------- 顶部左右分栏 ---------- */
 .top-grid {
     display: grid;
-    grid-template-columns: 260px 1fr;
-    gap: 72px;
+    /* 与下方「缩略图列 164px + 间距 22px」保持一致，教育背景左边缘对齐项目标题 */
+    grid-template-columns: 164px 1fr;
+    gap: 22px;
     align-items: start;
 }
 
 /* ---------- 顶部个人信息（头像、姓名、邮箱共用同一垂直中轴） ---------- */
 .profile-header {
-    width: 150px;          /* 与头像同宽，使三者共用照片中心线 */
+    width: 164px;          /* 与缩略图列同宽，头像中心对齐缩略图中心 */
     padding-bottom: 4px;
     text-align: center;
 }
@@ -96,7 +97,10 @@ img { max-width: 100%; display: block; }
     margin-bottom: 20px;
 }
 
-/* 右上教育背景标题略小，与头像区协调 */
+/* 右上教育背景标题略小，与头像区协调；整体略下移，与头像顶部错开更协调 */
+.education {
+    margin-top: 14px;
+}
 .education .section-title { font-size: 22px; }
 
 /* ---------- 教育背景（每行合并：时间 + 校徽 + 校名 + 专业学位） ---------- */
