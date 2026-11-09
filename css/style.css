@@ -1,6 +1,7 @@
 /* ============================================
-   魏兴森个人简历 - 极简学术风（仿导师主页）
-   白底 / 单栏居中 / 圆形头像 / 深蓝标题 / 无卡片
+   魏兴森个人简历 - 学术风
+   顶部左右分栏：左 头像信息 / 右 教育背景
+   下方通栏：项目经历
    ============================================ */
 
 :root {
@@ -11,7 +12,7 @@
     --accent: #1a5c96;           /* 链接蓝 */
     --thumb-bg: #f4f6f8;         /* 缩略图底色 */
 
-    --max-width: 760px;
+    --max-width: 1080px;
 
     --font-sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
@@ -36,35 +37,42 @@ img { max-width: 100%; display: block; }
 .page {
     max-width: var(--max-width);
     margin: 0 auto;
-    padding: 56px 24px 36px;
+    padding: 52px 40px 36px;
 }
 
-/* ---------- 顶部个人信息（居中） ---------- */
+/* ---------- 顶部左右分栏 ---------- */
+.top-grid {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 72px;
+    align-items: start;
+}
+
+/* ---------- 顶部个人信息（左对齐） ---------- */
 .profile-header {
-    text-align: center;
-    padding-bottom: 8px;
+    padding-bottom: 4px;
 }
 
 .avatar {
-    width: 157px;
-    height: 157px;
+    width: 150px;
+    height: 150px;
     border-radius: 100%;
     object-fit: cover;
     object-position: center top;
-    margin: 0 auto 22px;
+    margin-bottom: 18px;
 }
 
 .name {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 700;
     color: var(--heading);
     line-height: 1.3;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 .email {
-    margin-top: 12px;
-    font-size: 0.93rem;
+    margin-top: 6px;
+    font-size: 0.9rem;
 }
 
 .email a {
@@ -75,7 +83,8 @@ img { max-width: 100%; display: block; }
 .email a:hover { border-bottom-color: var(--accent); }
 
 /* ---------- 板块 ---------- */
-.section { margin-top: 46px; }
+.section { margin-top: 36px; }
+.main-content { margin-top: 46px; }
 
 .section-title {
     font-size: 25px;
@@ -83,6 +92,52 @@ img { max-width: 100%; display: block; }
     color: var(--heading);
     line-height: 1.35;
     margin-bottom: 20px;
+}
+
+/* 右上教育背景标题略小，与头像区协调 */
+.education .section-title { font-size: 22px; }
+
+/* ---------- 教育背景（右上竖排条目） ---------- */
+.edu-list li {
+    padding-bottom: 14px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid #edf1f5;
+}
+.edu-list li:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.edu-date {
+    display: block;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    letter-spacing: 0.3px;
+}
+
+.edu-school {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 3px;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.school-logo {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.edu-major {
+    display: block;
+    padding-left: 24px;
+    font-size: 0.82rem;
+    color: var(--text-muted);
 }
 
 /* ---------- 项目条目（左缩略图 + 右文字） ---------- */
@@ -101,14 +156,17 @@ img { max-width: 100%; display: block; }
     gap: 10px;
 }
 
-/* 缩略图：统一尺寸，完整显示不裁剪 */
+/* 缩略图：统一尺寸，完整显示不裁剪；点击可放大 */
 .entry-thumbs img {
     width: 164px;
     height: 110px;
     object-fit: contain;
     background: var(--thumb-bg);
     border-radius: 8px;
+    cursor: zoom-in;
+    transition: opacity .15s ease;
 }
+.entry-thumbs img:hover { opacity: 0.85; }
 
 .entry-body { flex: 1; min-width: 0; }
 
@@ -146,35 +204,30 @@ img { max-width: 100%; display: block; }
 }
 .entry-result strong { color: var(--text-dark); }
 
-/* ---------- 教育背景 ---------- */
-.edu-list li {
-    display: flex;
+/* ---------- 图片放大预览 ---------- */
+.lightbox {
+    position: fixed;
+    inset: 0;
+    display: none;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 6px 10px;
-    padding: 5px 0;
-    font-size: 0.95rem;
-    color: var(--text-body);
+    justify-content: center;
+    padding: 32px;
+    background: rgba(15, 23, 32, 0.9);
+    z-index: 1000;
+    cursor: zoom-out;
 }
-
-.edu-date {
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    min-width: 132px;
-}
-
-.school-logo {
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
+.lightbox.active { display: flex; }
+.lightbox img {
+    max-width: 92vw;
+    max-height: 88vh;
     object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.4);
 }
-
-.edu-content strong { color: var(--text-dark); }
 
 /* ---------- 页脚 ---------- */
 .footer {
-    margin-top: 64px;
+    margin-top: 56px;
     padding-top: 18px;
     border-top: 1px solid #e8edf2;
     text-align: center;
@@ -182,15 +235,22 @@ img { max-width: 100%; display: block; }
     color: var(--text-muted);
 }
 
-/* ---------- 响应式 ---------- */
+/* ---------- 平板 / 手机：改为上下排列 ---------- */
+@media (max-width: 860px) {
+    .top-grid {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+}
+
 @media (max-width: 640px) {
     .page { padding: 40px 18px 28px; }
 
     .avatar { width: 130px; height: 130px; }
 
-    .name { font-size: 1.7rem; }
+    .name { font-size: 1.6rem; }
 
-    .section { margin-top: 38px; }
+    .section { margin-top: 34px; }
 
     .section-title { font-size: 21px; }
 
@@ -213,6 +273,4 @@ img { max-width: 100%; display: block; }
         height: auto;
         aspect-ratio: 16 / 10;
     }
-
-    .edu-date { min-width: 100%; }
 }

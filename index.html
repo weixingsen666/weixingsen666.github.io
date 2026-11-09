@@ -19,97 +19,110 @@
 </head>
 <body>
 
-    <!-- 单栏居中页面容器 -->
+    <!-- 页面容器 -->
     <main class="page">
+        <div class="top-grid">
 
-        <!-- ========== 顶部个人信息 ========== -->
-        <header class="profile-header">
-            <img src="assets/wxs.png" alt="魏兴森" class="avatar">
-            <h1 class="name">魏兴森</h1>
-            <p class="email">
-                <a href="mailto:wxsjkd@163.com">wxsjkd@163.com</a>
-            </p>
-        </header>
+            <!-- ========== 左上：头像 + 姓名 + 邮箱 ========== -->
+            <header class="profile-header">
+                <img src="assets/wxs.png" alt="魏兴森" class="avatar">
+                <h1 class="name">魏兴森</h1>
+                <p class="email">
+                    <a href="mailto:wxsjkd@163.com">wxsjkd@163.com</a>
+                </p>
+            </header>
 
-        <!-- ========== 教育背景 ========== -->
-        <section class="section">
-            <h2 class="section-title">教育背景</h2>
-            <ul class="edu-list">
-                <li>
-                    <span class="edu-date">2027.09 - 2030.01</span>
-                    <img src="assets/logo_shu.png" alt="上海大学校徽" class="school-logo">
-                    <span class="edu-content"><strong>上海大学</strong>，计算机科学与技术，保研学硕</span>
-                </li>
-                <li>
-                    <span class="edu-date">2023.09 - 2027.06</span>
-                    <img src="assets/logo_just.png" alt="江苏科技大学校徽" class="school-logo">
-                    <span class="edu-content"><strong>江苏科技大学</strong>，软件工程，本科</span>
-                </li>
-            </ul>
-        </section>
+            <!-- ========== 右上：教育背景 ========== -->
+            <section class="section education">
+                <h2 class="section-title">教育背景</h2>
+                <ul class="edu-list">
+                    <li>
+                        <span class="edu-date">2027.09 - 2030.01</span>
+                        <span class="edu-school">
+                            <img src="assets/logo_shu.png" alt="上海大学校徽" class="school-logo">
+                            上海大学
+                        </span>
+                        <span class="edu-major">计算机科学与技术 · 保研学硕</span>
+                    </li>
+                    <li>
+                        <span class="edu-date">2023.09 - 2027.06</span>
+                        <span class="edu-school">
+                            <img src="assets/logo_just.png" alt="江苏科技大学校徽" class="school-logo">
+                            江苏科技大学
+                        </span>
+                        <span class="edu-major">软件工程 · 本科</span>
+                    </li>
+                </ul>
+            </section>
 
-        <!-- ========== 项目经历 ========== -->
-        <section class="section">
+        </div>
+
+        <!-- ========== 下方通栏：项目经历 ========== -->
+        <section class="section main-content">
             <h2 class="section-title">项目经历</h2>
 
-            <article class="entry">
-                <div class="entry-thumbs">
-                    <img src="assets/project/p1/p11.png" alt="知味行 TasteJourney 截图 1">
-                    <img src="assets/project/p1/p12.png" alt="知味行 TasteJourney 截图 2">
-                </div>
-                <div class="entry-body">
-                    <h3 class="entry-title">知味行 TasteJourney</h3>
-                    <p class="entry-meta">2025.09 - 2026.03</p>
-                    <p class="entry-desc">
-                        针对传统旅行规划中景点、餐饮、住宿割裂推荐、预算静态切分的问题，基于 LangGraph 构建 12
-                        节点多智能体流水线，采用 Send API 实现景点、酒店、美食、天气四路并行采集；设计景点与餐厅的
-                        空间配对算法，支持 500 m 步行圈半径可调，并完成逐分钟时间窗对齐；以 Event-Sourcing 模式实现
-                        预算管家，住宿结余自动全局重分配；引入 Plan-Execute-Reflect 可行性闭环，对紧凑度、排队、
-                        天气冲突自动回滚重排；支持高德真实 POI 与本地种子数据双数据源，断网环境可完整演示。
-                    </p>
-                    <p class="entry-tech">
-                        Python · LangGraph · FastAPI · MySQL · SQLite · 高德地图 API · Leaflet · PWA
-                    </p>
-                    <p class="entry-result">
-                        <strong>主要职责与成果：</strong>独立完成系统架构设计、核心算法实现与项目答辩演示；实现空间、
-                        时间、预算三维联合求解与 SSE 流式执行轨迹可视化；设计对话式规划模式，实现意图路由、参数抽取
-                        与会话内增量调整，支持大模型与规则引擎双轨；实现账号体系与方案、会话历史的持久化；编写测试
-                        覆盖地理计算、预算回放与端到端流程，景点餐厅配对率与餐饮落位率较高。
-                    </p>
-                </div>
-            </article>
+                <article class="entry">
+                    <div class="entry-thumbs">
+                        <img src="assets/project/p1/p11.png" alt="知味行 TasteJourney 截图 1">
+                        <img src="assets/project/p1/p12.png" alt="知味行 TasteJourney 截图 2">
+                    </div>
+                    <div class="entry-body">
+                        <h3 class="entry-title">知味行 TasteJourney</h3>
+                        <p class="entry-meta">2025.09 - 2026.03</p>
+                        <p class="entry-desc">
+                            针对传统旅行规划中景点、餐饮、住宿割裂推荐、预算静态切分的问题，基于 LangGraph 构建 12
+                            节点多智能体流水线，采用 Send API 实现景点、酒店、美食、天气四路并行采集；设计景点与餐厅的
+                            空间配对算法，支持 500 m 步行圈半径可调，并完成逐分钟时间窗对齐；以 Event-Sourcing 模式实现
+                            预算管家，住宿结余自动全局重分配；引入 Plan-Execute-Reflect 可行性闭环，对紧凑度、排队、
+                            天气冲突自动回滚重排；支持高德真实 POI 与本地种子数据双数据源，断网环境可完整演示。
+                        </p>
+                        <p class="entry-tech">
+                            Python · LangGraph · FastAPI · MySQL · SQLite · 高德地图 API · Leaflet · PWA
+                        </p>
+                        <p class="entry-result">
+                            <strong>主要职责与成果：</strong>独立完成系统架构设计、核心算法实现与项目答辩演示；实现空间、
+                            时间、预算三维联合求解与 SSE 流式执行轨迹可视化；设计对话式规划模式，实现意图路由、参数抽取
+                            与会话内增量调整，支持大模型与规则引擎双轨；实现账号体系与方案、会话历史的持久化；编写测试
+                            覆盖地理计算、预算回放与端到端流程，景点餐厅配对率与餐饮落位率较高。
+                        </p>
+                    </div>
+                </article>
 
-            <article class="entry">
-                <div class="entry-thumbs">
-                    <img src="assets/project/p2/picture1.png" alt="零智安探系统截图 1">
-                    <img src="assets/project/p2/picture2.png" alt="零智安探系统截图 2">
-                </div>
-                <div class="entry-body">
-                    <h3 class="entry-title">零智安探：AI 协同的全链安全态势感知系统</h3>
-                    <p class="entry-meta">2025.04 - 2026.03</p>
-                    <p class="entry-desc">
-                        针对网络安全漏洞检测误报率高的痛点，团队自研零智框架并通过差分验证实现高精度 Web 漏洞检测；
-                        集成 XGBoost 钓鱼识别、CNN 恶意 URL 检测等多模型；构建网络态势与攻防拓扑双维度推演引擎，
-                        并搭建漏洞知识图谱驱动的四维态势可视化平台。
-                    </p>
-                    <p class="entry-tech">
-                        机器学习 · 前端开发 · 知识图谱
-                    </p>
-                    <p class="entry-result">
-                        <strong>主要职责与成果：</strong>参与机器学习模型训练；重点负责前端开发，基于 Three.js
-                        等技术搭建 3D 动态态势感知大屏及多类型图表展示平台。项目转化获中国大学生计算机设计大赛
-                        Web 开发赛道江苏省一等奖、国家级二等奖。
-                    </p>
-                </div>
-            </article>
+                <article class="entry">
+                    <div class="entry-thumbs">
+                        <img src="assets/project/p2/picture1.png" alt="零智安探系统截图 1">
+                        <img src="assets/project/p2/picture2.png" alt="零智安探系统截图 2">
+                    </div>
+                    <div class="entry-body">
+                        <h3 class="entry-title">零智安探：AI 协同的全链安全态势感知系统</h3>
+                        <p class="entry-meta">2025.04 - 2026.03</p>
+                        <p class="entry-desc">
+                            针对网络安全漏洞检测误报率高的痛点，团队自研零智框架并通过差分验证实现高精度 Web 漏洞检测；
+                            集成 XGBoost 钓鱼识别、CNN 恶意 URL 检测等多模型；构建网络态势与攻防拓扑双维度推演引擎，
+                            并搭建漏洞知识图谱驱动的四维态势可视化平台。
+                        </p>
+                        <p class="entry-tech">
+                            机器学习 · 前端开发 · 知识图谱
+                        </p>
+                        <p class="entry-result">
+                            <strong>主要职责与成果：</strong>参与机器学习模型训练；重点负责前端开发，基于 Three.js
+                            等技术搭建 3D 动态态势感知大屏及多类型图表展示平台。项目转化获中国大学生计算机设计大赛
+                             Web 开发赛道江苏省一等奖、国家级二等奖。
+                        </p>
+                    </div>
+                </article>
         </section>
 
         <!-- ========== 页脚 ========== -->
         <footer class="footer">
             © <span id="year"></span> 魏兴森 · Powered by GitHub Pages
         </footer>
-
     </main>
+
+    <!-- 图片放大预览层 -->
+    <div class="lightbox" id="lightbox">
+        <img src="" alt="图片放大预览">
+    </div>
 
     <script src="js/script.js"></script>
 </body>
