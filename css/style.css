@@ -48,9 +48,11 @@ img { max-width: 100%; display: block; }
     align-items: start;
 }
 
-/* ---------- 顶部个人信息（左对齐） ---------- */
+/* ---------- 顶部个人信息（头像、姓名、邮箱共用同一垂直中轴） ---------- */
 .profile-header {
+    width: 150px;          /* 与头像同宽，使三者共用照片中心线 */
     padding-bottom: 4px;
+    text-align: center;
 }
 
 .avatar {
@@ -59,7 +61,7 @@ img { max-width: 100%; display: block; }
     border-radius: 100%;
     object-fit: cover;
     object-position: center top;
-    margin-bottom: 18px;
+    margin: 0 0 18px;
 }
 
 .name {
@@ -97,33 +99,35 @@ img { max-width: 100%; display: block; }
 /* 右上教育背景标题略小，与头像区协调 */
 .education .section-title { font-size: 22px; }
 
-/* ---------- 教育背景（右上竖排条目） ---------- */
-.edu-list li {
-    padding-bottom: 14px;
-    margin-bottom: 14px;
-    border-bottom: 1px solid #edf1f5;
+/* ---------- 教育背景（每行合并：时间 + 校徽 + 校名 + 专业学位） ---------- */
+.edu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
-.edu-list li:last-child {
-    padding-bottom: 0;
-    margin-bottom: 0;
-    border-bottom: none;
+
+.edu-list li {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    font-size: 0.93rem;
+    color: var(--text-body);
 }
 
 .edu-date {
-    display: block;
-    font-size: 0.78rem;
-    color: var(--text-muted);
+    font-size: 0.93rem;
+    color: var(--text-body);
     letter-spacing: 0.3px;
 }
 
 .edu-school {
-    display: flex;
+    display: inline-flex;
     align-items: center;
     gap: 6px;
-    margin-top: 3px;
     font-size: 0.93rem;
     font-weight: 500;
-    color: var(--text-dark);
+    color: var(--text-body);
 }
 
 .school-logo {
@@ -134,10 +138,8 @@ img { max-width: 100%; display: block; }
 }
 
 .edu-major {
-    display: block;
-    padding-left: 24px;
-    font-size: 0.82rem;
-    color: var(--text-muted);
+    font-size: 0.93rem;
+    color: var(--text-body);
 }
 
 /* ---------- 项目条目（左缩略图 + 右文字） ---------- */
@@ -170,7 +172,16 @@ img { max-width: 100%; display: block; }
 
 .entry-body { flex: 1; min-width: 0; }
 
+/* 标题行：项目标题左对齐，时间水平右对齐 */
+.entry-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+}
+
 .entry-title {
+    flex: 1;
     font-size: 1.02rem;
     font-weight: 700;
     color: var(--text-dark);
@@ -178,9 +189,10 @@ img { max-width: 100%; display: block; }
 }
 
 .entry-meta {
-    font-size: 0.84rem;
-    color: var(--text-muted);
-    margin-top: 2px;
+    flex: none;
+    font-size: 0.93rem;
+    color: var(--text-body);
+    white-space: nowrap;
 }
 
 .entry-desc {
@@ -192,13 +204,13 @@ img { max-width: 100%; display: block; }
 
 .entry-tech {
     margin-top: 8px;
-    font-size: 0.84rem;
-    color: var(--text-muted);
+    font-size: 0.93rem;
+    color: var(--text-body);
 }
 
 .entry-result {
     margin-top: 8px;
-    font-size: 0.9rem;
+    font-size: 0.93rem;
     color: var(--text-body);
     text-align: justify;
 }
@@ -260,6 +272,9 @@ img { max-width: 100%; display: block; }
         gap: 14px;
         margin-bottom: 30px;
     }
+
+    /* 标题与时间过长时允许换行 */
+    .entry-head { flex-wrap: wrap; }
 
     .entry-thumbs {
         flex: none;
