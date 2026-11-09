@@ -46,7 +46,7 @@ img { max-width: 100%; display: block; }
     /* 与下方「缩略图列 164px + 间距 22px」保持一致，教育背景左边缘对齐项目标题 */
     grid-template-columns: 164px 1fr;
     gap: 22px;
-    align-items: start;
+    align-items: center;   /* 教育背景与左侧头像区垂直居中，避免上重下轻 */
 }
 
 /* ---------- 顶部个人信息（头像、姓名、邮箱共用同一垂直中轴） ---------- */
@@ -66,7 +66,7 @@ img { max-width: 100%; display: block; }
 }
 
 .name {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
     font-weight: 700;
     color: var(--heading);
     line-height: 1.3;
@@ -97,13 +97,13 @@ img { max-width: 100%; display: block; }
     margin-bottom: 20px;
 }
 
-/* 右上教育背景标题略小，与头像区协调；整体略下移，与头像顶部错开更协调 */
+/* 教育背景：与左侧头像区垂直居中 */
 .education {
-    margin-top: 14px;
+    margin-top: 0;
 }
 .education .section-title { font-size: 22px; }
 
-/* ---------- 教育背景（每行合并：时间 + 校徽 + 校名 + 专业学位） ---------- */
+/* ---------- 教育背景（一行一条，三列对齐：时间 / 学校 / 专业学位） ---------- */
 .edu-list {
     display: flex;
     flex-direction: column;
@@ -111,10 +111,10 @@ img { max-width: 100%; display: block; }
 }
 
 .edu-list li {
-    display: flex;
+    display: grid;
+    grid-template-columns: 150px 170px 1fr;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
+    column-gap: 16px;
     font-size: 0.93rem;
     color: var(--text-body);
 }
@@ -269,6 +269,12 @@ img { max-width: 100%; display: block; }
     .section { margin-top: 34px; }
 
     .section-title { font-size: 21px; }
+
+    /* 手机上教育背景三列改为竖排 */
+    .edu-list li {
+        grid-template-columns: 1fr;
+        row-gap: 2px;
+    }
 
     /* 手机上图文改为上下排列，缩略图并排一行 */
     .entry {
