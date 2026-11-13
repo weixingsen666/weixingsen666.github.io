@@ -57,13 +57,23 @@ img { max-width: 100%; display: block; }
 .profile-main {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 18px;
 }
 
 .profile-header {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
     width: 100%;
-    padding-bottom: 4px;
+    padding-bottom: 0;
     text-align: left;
+}
+
+.identity {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    flex-wrap: wrap;
 }
 
 .avatar {
@@ -84,7 +94,7 @@ img { max-width: 100%; display: block; }
 }
 
 .email {
-    margin-top: 4px;
+    margin-top: 0;
     font-size: 0.9rem;
 }
 
@@ -113,7 +123,7 @@ img { max-width: 100%; display: block; }
 }
 .education .section-title {
     font-size: 20px;
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 }
 
 /* ---------- 教育背景（一行一条，三列对齐：时间 / 学校 / 专业学位） ---------- */
