@@ -23,18 +23,22 @@
     <main class="page">
         <div class="top-grid">
 
-            <!-- ========== 左上：头像 + 姓名 + 邮箱 ========== -->
-            <header class="profile-header">
+            <!-- ========== 左上：头像 ========== -->
+            <div class="profile-photo">
                 <img src="assets/wxs.png" alt="魏兴森" class="avatar">
-                <h1 class="name">WXS</h1>
-                <p class="email">
-                    <a href="mailto:wxsjkd@163.com">wxsjkd@163.com</a>
-                </p>
-            </header>
+            </div>
 
-            <!-- ========== 右上：教育背景 ========== -->
-            <section class="section education">
-                <h2 class="section-title">教育背景</h2>
+            <!-- ========== 右上：姓名 + 邮箱 + 教育背景 ========== -->
+            <div class="profile-main">
+                <header class="profile-header">
+                    <h1 class="name">WXS</h1>
+                    <p class="email">
+                        <a href="mailto:wxsjkd@163.com">wxsjkd@163.com</a>
+                    </p>
+                </header>
+
+                <section class="section education">
+                    <h2 class="section-title">教育背景</h2>
                 <ul class="edu-list">
                     <li>
                         <span class="edu-date">2027.09 - 2030.01</span>
@@ -53,7 +57,8 @@
                         <span class="edu-major">软件工程 · 本科</span>
                     </li>
                 </ul>
-            </section>
+                </section>
+            </div>
 
         </div>
 
@@ -119,7 +124,7 @@
 
         <!-- ========== 页脚 ========== -->
         <footer class="footer">
-            © <span id="year"></span> 魏兴森 · Powered by GitHub Pages
+            © <span id="year"></span> wxs · Powered by GitHub Pages
         </footer>
     </main>
 
