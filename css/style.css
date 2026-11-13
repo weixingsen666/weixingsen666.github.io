@@ -49,9 +49,19 @@ img { max-width: 100%; display: block; }
     align-items: center;   /* 教育背景与左侧头像区垂直居中，避免上重下轻 */
 }
 
-/* ---------- 顶部个人信息（头像、姓名、邮箱左边缘对齐） ---------- */
-.profile-header {
+/* ---------- 顶部个人信息（姓名、邮箱位于右栏教育背景上方） ---------- */
+.profile-photo {
     width: 164px;
+}
+
+.profile-main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-header {
+    width: 100%;
     padding-bottom: 4px;
     text-align: left;
 }
@@ -62,7 +72,7 @@ img { max-width: 100%; display: block; }
     border-radius: 100%;
     object-fit: cover;
     object-position: center top;
-    margin: 0 0 18px;
+    margin: 0;
 }
 
 .name {
@@ -74,7 +84,7 @@ img { max-width: 100%; display: block; }
 }
 
 .email {
-    margin-top: 6px;
+    margin-top: 4px;
     font-size: 0.9rem;
 }
 
