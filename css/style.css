@@ -57,7 +57,7 @@ img { max-width: 100%; display: block; }
 .profile-main {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 30px;
 }
 
 .profile-header {
@@ -97,7 +97,7 @@ img { max-width: 100%; display: block; }
 
 /* ---------- 板块 ---------- */
 .section { margin-top: 36px; }
-.main-content { margin-top: 46px; }
+.main-content { margin-top: 28px; }
 
 .section-title {
     font-size: 25px;
@@ -111,7 +111,10 @@ img { max-width: 100%; display: block; }
 .education {
     margin-top: 0;
 }
-.education .section-title { font-size: 22px; }
+.education .section-title {
+    font-size: 20px;
+    margin-bottom: 14px;
+}
 
 /* ---------- 教育背景（一行一条，三列对齐：时间 / 学校 / 专业学位） ---------- */
 .edu-list {
@@ -122,10 +125,11 @@ img { max-width: 100%; display: block; }
 
 .edu-list li {
     display: grid;
-    grid-template-columns: 150px 170px 1fr;
+    grid-template-columns: 140px 140px 1fr;
     align-items: center;
-    column-gap: 16px;
+    column-gap: 20px;
     font-size: 0.93rem;
+    line-height: 1.7;
     color: var(--text-body);
 }
 
